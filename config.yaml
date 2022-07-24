@@ -1,4 +1,4 @@
-stripePublishKey: "pk_live_51LOu0OFIpP7lZZfLDxAMiaknpYwW2C9QpQWLAYo5xbhMxIBCow1vahuu9d6nnVF7WHRSd16D9VJBwjCdc2qHBVnf00Vxp7tSTV"
-stripePrivateKey: "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"
-ammount: "0100"
-currency: "brl"
+stripePublishKey: "pk_live..."
+stripePrivateKey: "sk_live_..."
+ammount: "...."
+currency: "usd"
