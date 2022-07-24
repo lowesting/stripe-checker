@@ -1,4 +1,3 @@
-// test cc: 5522897082630481|08|2027|404
 package main
 
 import (
