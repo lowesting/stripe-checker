@@ -2,7 +2,7 @@
 Credit card checker using stripe payment gateway.
 
 # building
-to build it is very simple, you need [github]() and [golang]() installed to start
+to build it is very simple, you need [git](https://git-scm.com/) and [golang](https://go.dev/) installed to start
 ```bash
   # clone repo
   $ git clone https://github.com/J4c5/stripe-checker.git
