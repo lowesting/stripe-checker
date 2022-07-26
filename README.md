@@ -13,7 +13,7 @@ to build it is very simple, you need [github]() and [golang]() installed to star
   # do the build
   $ go build -o schecker cli.go
 ```
-after that you will have the binary called checker (stripe-checker) now just [use it](https://github.com/J4c5/stripe-checker/edit/main/README.md#how-to-use)
+after that you will have the binary called schecker (stripe-checker) now just [use it](https://github.com/J4c5/stripe-checker/edit/main/README.md#how-to-use)
 
 # how to use
 to check only one card you can use
