@@ -40,3 +40,9 @@ ammount: "...."
 currency: "usd"
 ```
 - note: in your file you can change keys, change the value that will be pulled in the check and change the currency
+
+if you have more than one configuration file you can pass it using flags
+```bash
+  # this way you can use several configuration files just passing their name in the config path flag
+  $ schecker —config-path myconfig.yaml list my_cards.txt
+```
