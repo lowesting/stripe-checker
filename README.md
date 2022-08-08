@@ -5,7 +5,7 @@ Credit card checker using stripe payment gateway.
 to build it is very simple, you need [git](https://git-scm.com/) and [golang](https://go.dev/) installed to start
 ```bash
   # clone repo
-  $ git clone https://github.com/J4c5/stripe-checker.git
+  $ git clone https://github.com/41337/stripe-checker.git
   
   # enter the folder
   $ cd stripe-checker
@@ -13,7 +13,7 @@ to build it is very simple, you need [git](https://git-scm.com/) and [golang](ht
   # do the build
   $ go build -o schecker cli.go
 ```
-after that you will have the binary called schecker (stripe-checker) now just [use it](https://github.com/J4c5/stripe-checker/edit/main/README.md#how-to-use)
+after that you will have the binary called schecker (stripe-checker) now just [use it](https://github.com/41337/stripe-checker/edit/main/README.md#how-to-use)
 
 # how to use
 to check only one card you can use
@@ -32,7 +32,7 @@ to check only one card you can use
 ```
 
 # configuration file
-your [configuration](https://github.com/J4c5/stripe-checker/blob/main/config.yaml) file should look like this:
+your [configuration](https://github.com/41337/stripe-checker/blob/main/config.yaml) file should look like this:
 ```yaml
 stripePublishKey: "pk_live..."
 stripePrivateKey: "sk_live_..."
