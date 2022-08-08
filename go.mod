@@ -1,4 +1,4 @@
-module github.com/J4c5/stripe-checker
+module github.com/41337/stripe-checker
 
 go 1.13
 
