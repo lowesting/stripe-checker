@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/J4c5/stripe-checker/src"
+	"github.com/41337/stripe-checker/src"
 	"github.com/urfave/cli"
 )
 
