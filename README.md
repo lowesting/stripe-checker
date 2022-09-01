@@ -19,7 +19,7 @@ after that you will have the binary called schecker (stripe-checker) now just [u
 to check only one card you can use
 ```bash
   # command once arrives only one card, you can abbreviate with: o, 0
-  $ schecker once 5555555555555555|05|2025|555  
+  $ schecker once "5555555555555555|05|2025|555"
 ```
 ```bash
   # your card list should look like this:
