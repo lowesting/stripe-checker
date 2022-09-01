@@ -19,7 +19,7 @@ after that you will have the binary called schecker (stripe-checker) now just [u
 to check only one card you can use
 ```bash
   # command once arrives only one card, you can abbreviate with: o, 0
-  $ schecker once "5555555555555555|05|2025|555"
+  $ ./schecker once "5555555555555555|05|2025|555"
 ```
 ```bash
   # your card list should look like this:
@@ -28,7 +28,7 @@ to check only one card you can use
   5555555555555555|05|2025|555
   
   # list command check multiple cards in a list, you can abbreviate it with: l
-  $ schecker list my_cards.txt
+  $ ./schecker list my_cards.txt
 ```
 
 # configuration file
@@ -44,5 +44,5 @@ currency: "usd"
 if you have more than one configuration file you can pass it using flags
 ```bash
   # this way you can use several configuration files just passing their name in the config path flag
-  $ schecker —config-path myconfig.yaml list my_cards.txt
+  $ ./schecker —config-path myconfig.yaml list my_cards.txt
 ```
