@@ -1,4 +1,4 @@
 stripePublishKey: "pk_live..."
 stripePrivateKey: "sk_live_..."
-ammount: "...."
+amount: "...."
 currency: "usd"
