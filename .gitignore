@@ -1,4 +1,5 @@
 *.txt
 *.exe
 *.cfg
+myconfig.yaml
 scripts

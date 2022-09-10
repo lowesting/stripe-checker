@@ -15,7 +15,7 @@ type OpenCardListCallback func(rawCard string)
 type Config struct {
 	PublishKey string `yaml:"stripePublishKey"`
 	PrivateKey string `yaml:"stripePrivateKey"`
-	Ammount    string `yaml:"ammount"`
+	Ammount    string `yaml:"amount"`
 	Currency   string `yaml:"currency"`
 }
 
