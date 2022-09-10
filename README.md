@@ -21,6 +21,9 @@ to check only one card you can use
   # command once arrives only one card, you can abbreviate with: o, 0
   $ ./schecker once "5555555555555555|05|2025|555"
 ```
+#### Once Print
+![](https://github.com/41337/stripe-checker/blob/assets/once.jpg)
+
 ```bash
   # your card list should look like this:
   5555555555555555|05|2025|555
