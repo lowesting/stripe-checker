@@ -21,9 +21,10 @@ to check only one card you can use
   # command once arrives only one card, you can abbreviate with: o, 0
   $ ./schecker once "5555555555555555|05|2025|555"
 ```
-#### Once Print
+#### Once Mode Print
 ![](https://github.com/41337/stripe-checker/blob/assets/once.jpg)
 
+to check card list
 ```bash
   # your card list should look like this:
   5555555555555555|05|2025|555
@@ -33,6 +34,8 @@ to check only one card you can use
   # list command check multiple cards in a list, you can abbreviate it with: l
   $ ./schecker list my_cards.txt
 ```
+#### List Mode Print
+![](https://github.com/41337/stripe-checker/blob/assets/list.jpg)
 
 # configuration file
 your [configuration](https://github.com/41337/stripe-checker/blob/main/config.yaml) file should look like this:
