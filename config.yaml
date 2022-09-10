@@ -1,4 +1,5 @@
-stripePublishKey: "pk_live..."
-stripePrivateKey: "sk_live_..."
-amount: "...."
-currency: "usd"
+##  Do not share this configuration file with anyone as it contains sensitive data from your stripe account
+stripePublishKey: "pk_live..."  # ur public api key
+stripePrivateKey: "sk_live_..." # ur private api key
+amount: "...."                  # value must be an integer syntax, don't try nonsense like 001, use 010.
+currency: "usd"                 # currency must be from the same location where your account was created, if it was created in United States then it will be USD dollar.
