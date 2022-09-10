@@ -91,7 +91,10 @@ func CheckCard(cc CardStruct, config Config) (CheckerResult, error) {
 	}
 
 	// create a payment indent
-	pi, _ := paymentintent.New(params)
+	pi, err := paymentintent.New(params)
+	if err != nil {
+		return CheckerResult{}, err
+	}
 
 	// requests stripe api
 	url := fmt.Sprintf("https://api.stripe.com/v1/payment_intents/%s/confirm", pi.ID)
@@ -99,7 +102,10 @@ func CheckCard(cc CardStruct, config Config) (CheckerResult, error) {
 	payload := strings.NewReader(fmt.Sprintf("return_url=https://stripe.com&payment_method_data[type]=card&payment_method_data[card][number]=%s&payment_method_data[card][cvc]=%s&payment_method_data[card][exp_year]=%s&payment_method_data[card][exp_month]=%s&payment_method_data[billing_details][address][country]=BR&payment_method_data[payment_user_agent]=stripe.js/eb14574ae;+stripe-js-v3/eb14574ae;+payment-element&payment_method_data[time_on_page]=145828&payment_method_data[guid]=a6cb16e6-1eee-420c-bdd7-49271c53ee9537ac30&payment_method_data[muid]=6a5417b9-177e-4293-af9b-200ef3fdac60ef8bc5&payment_method_data[sid]=c0d2f286-3f58-4e9b-95a5-d5bef895e91b377d41&expected_payment_method_type=card&use_stripe_sdk=true&key=%s&client_secret=%s", cc.Number, cc.Cvc, cc.ExpYear, cc.ExpMonth, config.PublishKey, pi.ClientSecret))
 
 	client := &http.Client{}
-	req, _ := http.NewRequest(method, url, payload)
+	req, err := http.NewRequest(method, url, payload)
+	if err != nil {
+		return CheckerResult{}, err
+	}
 
 	// set headers
 	req.Header.Add("authority", "api.stripe.com")
@@ -116,12 +122,21 @@ func CheckCard(cc CardStruct, config Config) (CheckerResult, error) {
 	req.Header.Add("sec-fetch-site", "same-site")
 	req.Header.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36")
 
-	res, _ := client.Do(req)
+	res, err := client.Do(req)
+	if err != nil {
+		return CheckerResult{}, err
+	}
 
-	body, _ := ioutil.ReadAll(res.Body)
+	body, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		return CheckerResult{}, err
+	}
 
 	// pass json response to gabs
-	jsonParsed, _ := gabs.ParseJSON(body)
+	jsonParsed, err := gabs.ParseJSON(body)
+	if err != nil {
+		return CheckerResult{}, err
+	}
 
 	// check
 	if jsonParsed.ExistsP("error") {
